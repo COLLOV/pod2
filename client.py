@@ -3,7 +3,9 @@ import os
 import time
 
 # Configuration
-SERVER_URL = os.getenv('SERVER_URL', 'http://localhost:5000')
+# Utilisation du DNS interne de RunPod
+# Remplacer POD_ID par l'ID du pod serveur (ex: 'abc123.runpod.internal')
+SERVER_URL = os.getenv('SERVER_URL', 'http://POD_ID.runpod.internal:80')
 
 def send_message(message):
     try:

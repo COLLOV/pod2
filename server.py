@@ -4,7 +4,7 @@ import os
 app = Flask(__name__)
 
 # Configuration
-PORT = os.getenv('PORT', 5000)
+PORT = os.getenv('PORT', 80)
 HOST = '0.0.0.0'
 
 @app.route('/api/message', methods=['POST'])
