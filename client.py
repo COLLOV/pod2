@@ -3,9 +3,10 @@ import os
 import time
 
 # Configuration
-# Utilisation du DNS interne de RunPod
-# Remplacer POD_ID par l'ID du pod serveur (ex: 'abc123.runpod.internal')
-SERVER_URL = os.getenv('SERVER_URL', 'http://POD_ID.runpod.internal:80')
+# Utilisation du proxy RunPod
+# Format: https://POD_ID-PORT.proxy.runpod.net
+# Exemple pour le port 80: https://abc123-80.proxy.runpod.net
+SERVER_URL = os.getenv('SERVER_URL', 'https://POD_ID-80.proxy.runpod.net')
 
 def send_message(message):
     try:
