@@ -3,7 +3,7 @@ import os
 import time
 
 # Configuration
-SERVER_URL = os.getenv('SERVER_URL', 'http://server-pod:5000')
+SERVER_URL = os.getenv('SERVER_URL', 'http://localhost:5000')
 
 def send_message(message):
     try:
